@@ -8,14 +8,14 @@
   <link rel="canonical" href="https://1415736056.github.io/tieba-resource-library/">
   <title>贴吧资源架</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261019-copy3">
-  <script src="data.js?v=20261019-copy3" defer></script>
-  <script src="app.js?v=20261019-copy3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=resources-401a040a4d9d">
+  <script src="data.js?v=resources-401a040a4d9d" defer></script>
+  <script src="app.js?v=resources-401a040a4d9d" defer></script>
 </head>
 <body>
   <header class="topbar"><div class="topbar-inner"><a class="brand" href="./" aria-label="资源架首页"><span class="brand-mark" aria-hidden="true">集</span><span>资源架<small id="account-summary">公开资源</small></span></a><button class="quiet-button" id="coverage-button">采集说明 <span aria-hidden="true">ⓘ</span></button></div></header>
   <main class="page">
-    <section class="intro" aria-labelledby="page-title"><div><p class="intro-kicker">漫画、游戏，还有日常好工具</p><h1 id="page-title">贴吧资源架</h1><p class="intro-copy">按账号查找图文和资源链接，手机上也能随手翻。</p></div><div class="shelf-art" aria-hidden="true"><span>漫</span><span>游</span><span>书</span></div><div class="intro-meta"><span id="total-count"></span><span>2026.10.19 整理</span></div></section>
+    <section class="intro" aria-labelledby="page-title"><div><p class="intro-kicker">漫画、游戏，还有日常好工具</p><h1 id="page-title">贴吧资源架</h1><p class="intro-copy">按账号查找图文和资源链接，手机上也能随手翻。</p></div><div class="shelf-art" aria-hidden="true"><span>漫</span><span>游</span><span>书</span></div><div class="intro-meta"><span id="total-count"></span><span id="last-updated"></span></div></section>
     <section class="browse-tools" aria-label="查找资源">
       <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="search" type="search" autocomplete="off" placeholder="搜索标题、贴吧或正文" aria-label="搜索资源"><button id="clear-search" type="button" hidden aria-label="清空搜索">×</button></label>
       <label class="account-picker"><span>查看账号</span><select id="account-filter" aria-label="筛选账号"></select></label>
@@ -28,7 +28,7 @@
   </main>
   <nav class="bottom-nav" aria-label="主要导航"><button id="all-tab" class="nav-button active" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>全部资源</button><button id="favorites-tab" class="nav-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>我的收藏 <span id="favorite-count">0</span></button></nav>
   <dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><div class="dialog-top"><button class="back-button" id="close-detail" aria-label="关闭资源详情"><span aria-hidden="true">‹</span> 返回列表</button><button class="quiet-button" id="detail-favorite" aria-pressed="false">收藏</button></div><div id="detail-content" class="detail-content"></div></dialog>
-  <dialog id="coverage-dialog" class="coverage-dialog" aria-labelledby="coverage-title"><button id="close-coverage" class="close-round" aria-label="关闭采集说明">×</button><span class="small-heading">关于这份资源架</span><h2 id="coverage-title">有来源，也保留缺口。</h2><p id="coverage-intro"></p><dl class="coverage-grid" id="coverage-stats"></dl><div id="coverage-accounts"></div><p class="coverage-warning" id="coverage-warning"></p><p>历史记录通过项目已有的 ANOVA、EZTB 和 aiotieba 接口交叉发现，逐帖读取详情、评论和图片。仅参与回复的他人帖子保留在采集档案，不计入面板的自发帖数量。</p><p>这是本次接口可返回的记录，不保证覆盖全部隐藏或已删除历史。网盘链接未逐一验证有效性，也未执行转存。</p><p class="muted">“我的收藏”仅存储在当前浏览器，换设备后不会自动同步。该面板不会自动更新采集记录。</p></dialog>
+  <dialog id="coverage-dialog" class="coverage-dialog" aria-labelledby="coverage-title"><button id="close-coverage" class="close-round" aria-label="关闭采集说明">×</button><span class="small-heading">关于这份资源架</span><h2 id="coverage-title">有来源，也保留缺口。</h2><p id="coverage-intro"></p><dl class="coverage-grid" id="coverage-stats"></dl><div id="coverage-accounts"></div><p class="coverage-warning" id="coverage-warning"></p><p>历史记录通过项目已有的 ANOVA、EZTB 和 aiotieba 接口交叉发现，逐帖读取详情、评论和图片。仅参与回复的他人帖子保留在采集档案，不计入面板的自发帖数量。</p><p>这是本次接口可返回的记录，不保证覆盖全部隐藏或已删除历史。网盘链接未逐一验证有效性，也未执行转存。</p><p class="muted">“我的收藏”仅存储在当前浏览器，换设备后不会自动同步。本次新增的 6 个账号约每小时检查一次，有新增资源后更新面板。</p></dialog>
   <dialog id="image-dialog" class="image-dialog" aria-label="查看大图"><button id="close-image" class="image-close" aria-label="关闭大图">×</button><img id="large-image" alt="资源大图"><p>双指缩放可查看图片细节</p></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <noscript><div class="noscript">请启用浏览器 JavaScript，以查看资源列表和使用搜索。</div></noscript>
